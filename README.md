@@ -12,6 +12,18 @@ This project is a formal computational model. It does **not** claim to prove the
 apk add --no-cache python3 curl >/dev/null 2>&1 && curl -fsSL https://raw.githubusercontent.com/letsgo0226/CLSigma/main/runtime.py | python3
 ```
 
+## Cross-version ordered startup
+
+`runtime.py` is written with conservative Python 3.6+ syntax:
+
+- no `list[int]`
+- no `dict[str, int]`
+- no `str | None`
+- no external packages
+- no modern syntax that would break older iSH / Alpine Python builds
+
+The goal is a cross-version startup kernel: the runtime should keep booting even when Python versions differ across iSH, Alpine, Termux, Linux, and macOS.
+
 ## Local execution
 
 ```sh
@@ -36,7 +48,7 @@ CLSigma_TOEComplete.clcert
 ## Main files
 
 ```text
-runtime.py   # full CLSigma runtime
+runtime.py   # full CLSigma cross-version runtime
 CLSigma.sh   # local shell launcher
 README.md    # usage and scope
 ```
