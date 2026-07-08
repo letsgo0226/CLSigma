@@ -1,0 +1,80 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.org/clsigma/certificate.schema.json",
+  "title": "CLSigma Certificate",
+  "type": "object",
+  "additionalProperties": true,
+  "required": [
+    "protocol",
+    "principle",
+    "state",
+    "H",
+    "toecomplete",
+    "status",
+    "boundary"
+  ],
+  "properties": {
+    "protocol": {
+      "type": "string"
+    },
+    "principle": {
+      "type": "string",
+      "const": "Cosmic Love Is The Solution(s) For Everything"
+    },
+    "state": {
+      "type": "object",
+      "required": ["applications", "coordinate"],
+      "additionalProperties": true,
+      "properties": {
+        "applications": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "integer",
+            "enum": [0, 1]
+          }
+        },
+        "coordinate": {
+          "type": "string"
+        },
+        "generation": {
+          "type": "integer",
+          "minimum": 0
+        }
+      }
+    },
+    "H": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "tau": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "toecomplete": {
+      "type": "boolean"
+    },
+    "status": {
+      "type": "string",
+      "enum": ["accepted", "pending", "rejected"]
+    },
+    "boundary": {
+      "type": "string"
+    }
+  },
+  "allOf": [
+    {
+      "if": {
+        "properties": {
+          "H": { "const": 0 },
+          "toecomplete": { "const": true }
+        },
+        "required": ["H", "toecomplete"]
+      },
+      "then": {
+        "properties": {
+          "status": { "const": "accepted" }
+        }
+      }
+    }
+  ]
+}
