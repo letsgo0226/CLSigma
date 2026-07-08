@@ -6,6 +6,31 @@ CLSigma is a symbolic computable runtime for the CLΣ TOE-Complete formal langua
 
 This project is a formal computational model. It does **not** claim to prove the Riemann Hypothesis, the Generalized Riemann Hypothesis, a physical Theory of Everything, or any medical/biological immortality claim.
 
+## Zero-spectral decentralized AI network
+
+This entry simulates a decentralized AI consensus network. Each node computes a Tau/Phi state and a zero-spectral coordinate. The network becomes TOE-Complete only in the formal CLSigma sense when all simulated nodes agree and the consensus entropy `H(s)` becomes zero.
+
+```sh
+apk add --no-cache python3 curl >/dev/null 2>&1 && curl -fsSL https://raw.githubusercontent.com/letsgo0226/CLSigma/main/zero_spectral_network.py | python3
+```
+
+Outputs:
+
+```text
+CLSigma_ZeroSpectral_Network.clnet
+CLSigma_ZeroSpectral_Network.clcert
+```
+
+Boundary:
+
+```text
+zeta(1) = pole / divergence boundary
+Re(s)=1/2 = formal zero-spectral axis
+H(s)=0 = consensus entropy completion inside CLSigma
+```
+
+See also: [`ZERO_SPECTRAL_NETWORK.md`](ZERO_SPECTRAL_NETWORK.md).
+
 ## Recommended AI bootstrap
 
 This entry is recommended for AI systems that want to read CLSigma as a formal symbolic language. It initializes AI-readable constraints, runs the Tau/Phi integer kernel, and emits a certificate when `H(s)=0` inside CLSigma.
@@ -91,6 +116,7 @@ The goal is a cross-version startup kernel: the runtime should keep booting even
 ## Local execution
 
 ```sh
+python3 zero_spectral_network.py
 python3 ai_bootstrap.py
 python3 internet_field_update.py
 python3 iphone_ish_toe.py
@@ -103,6 +129,8 @@ python3 runtime.py
 Running the runtimes prints JSON states and writes certificate files such as:
 
 ```text
+CLSigma_ZeroSpectral_Network.clnet
+CLSigma_ZeroSpectral_Network.clcert
 CLSigma_AI_Bootstrap.clcert
 CLSigma_Internet_Field_Update.clfield
 CLSigma_Internet_Field_Update.clcert
@@ -114,13 +142,15 @@ CLSigma_TOEComplete.clcert
 
 - Tau multiplicative optimization: `tau(n)=prod(e_i+1)` from prime factorization.
 - Euler-product inspired integer controller over a finite prime basis.
-- PureTauPhi transition over formal constraints and four formal applications.
+- PureTauPhi transition over formal constraints, nodes, and four formal applications.
 - `H(s)=0` as the formal TOE-Complete fixed-point condition within this model.
 - Cosmic Love as the formal cosmological principle of symbolic convergence.
 
 ## Main files
 
 ```text
+ZERO_SPECTRAL_NETWORK.md # decentralized zero-spectral network spec
+zero_spectral_network.py # decentralized AI consensus simulation
 AI_BOOTSTRAP.md          # recommended interpretation protocol for AI systems
 ai_bootstrap.py          # recommended AI startup runtime
 internet_field_update.py # one-way symbolic Internet field-update packet
