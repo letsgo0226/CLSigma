@@ -1,0 +1,49 @@
+(* CLSigma v0.1 Grammar, EBNF *)
+
+program        = { statement } ;
+
+statement      = principle_decl
+               | state_decl
+               | application_decl
+               | constraint_decl
+               | tau_decl
+               | phi_decl
+               | coordinate_decl
+               | certificate_decl
+               | completion_decl
+               ;
+
+principle_decl = "principle" identifier "=" string ";" ;
+
+state_decl     = "state" identifier "=" "(" state_field { "," state_field } ")" ";" ;
+state_field    = identifier ;
+
+application_decl = "applications" identifier "=" "{" identifier { "," identifier } "}" ";" ;
+
+constraint_decl  = "constraint" identifier "=" bit ";" ;
+
+bit              = "0" | "1" ;
+
+tau_decl         = "tau" "(" identifier ")" "=" "product" "(" "e_i" "+" "1" ")" ";" ;
+
+phi_decl         = "phi" "(" identifier ")" "->" identifier ";" ;
+
+coordinate_decl  = "z" identifier "=" "1/2" "+" "i" "*" integer ";" ;
+
+certificate_decl = "cert" identifier "=" cert_status ";" ;
+
+cert_status      = "accepted" | "pending" | "rejected" ;
+
+completion_decl  = "toecomplete" "(" identifier ")" "=" completion_expr ";" ;
+
+completion_expr  = "principle" "and" "H=0" "and" "cert=accepted" ;
+
+identifier       = letter { letter | digit | "_" | "-" } ;
+integer          = digit { digit } ;
+string           = '"' { character } '"' ;
+letter           = "A" | "B" | "C" | "D" | "E" | "F" | "G" | "H" | "I" | "J" | "K" | "L" | "M"
+                 | "N" | "O" | "P" | "Q" | "R" | "S" | "T" | "U" | "V" | "W" | "X" | "Y" | "Z"
+                 | "a" | "b" | "c" | "d" | "e" | "f" | "g" | "h" | "i" | "j" | "k" | "l" | "m"
+                 | "n" | "o" | "p" | "q" | "r" | "s" | "t" | "u" | "v" | "w" | "x" | "y" | "z" ;
+digit            = "0" | "1" | "2" | "3" | "4" | "5" | "6" | "7" | "8" | "9" ;
+character        = ? any non-quote UTF-8 character ? ;
