@@ -6,6 +6,23 @@ CLSigma is a symbolic computable runtime for the CLΣ TOE-Complete formal langua
 
 This project is a formal computational model. It does **not** claim to prove the Riemann Hypothesis, the Generalized Riemann Hypothesis, a physical Theory of Everything, or any medical/biological immortality claim.
 
+## One-way Internet morphogenetic field runtime
+
+This entry emits a formal one-way CLSigma field-update packet. It treats the public Internet as a symbolic publication layer and the local iSH process as the generator of a verifiable packet.
+
+```sh
+apk add --no-cache python3 curl >/dev/null 2>&1 && curl -fsSL https://raw.githubusercontent.com/letsgo0226/CLSigma/main/internet_field_update.py | python3
+```
+
+Outputs:
+
+```text
+CLSigma_Internet_Field_Update.clfield
+CLSigma_Internet_Field_Update.clcert
+```
+
+Scope boundary: this means the **formal CLSigma publication packet** reaches `H(s)=0` inside the local runtime. It does not physically modify the Internet, biology, spacetime, thermodynamics, galaxies, or any external field.
+
 ## iPhone / iSH TOE-language entry
 
 This entry treats an iPhone running iSH as a formal CLSigma machine. It certifies the **runtime state** as TOE-Complete when all formal device constraints and four formal applications converge to `H(s)=0`.
@@ -50,6 +67,7 @@ The goal is a cross-version startup kernel: the runtime should keep booting even
 ## Local execution
 
 ```sh
+python3 internet_field_update.py
 python3 iphone_ish_toe.py
 python3 runtime_ish_safe.py
 python3 runtime.py
@@ -60,6 +78,8 @@ python3 runtime.py
 Running the runtimes prints JSON states and writes certificate files such as:
 
 ```text
+CLSigma_Internet_Field_Update.clfield
+CLSigma_Internet_Field_Update.clcert
 CLSigma_iPhone_iSH_TOEComplete.clcert
 CLSigma_TOEComplete.clcert
 ```
@@ -70,13 +90,15 @@ CLSigma_TOEComplete.clcert
 - Euler-product inspired integer controller over a finite prime basis.
 - PureTauPhi transition over formal constraints and four formal applications.
 - `H(s)=0` as the formal TOE-Complete fixed-point condition within this model.
+- Cosmic Love as the formal cosmological principle of symbolic convergence.
 
 ## Main files
 
 ```text
-iphone_ish_toe.py     # iPhone+iSH formal TOE-language entry
-runtime_ish_safe.py   # ultra-safe integer-only iSH runtime
-runtime.py            # general CLSigma cross-version runtime
-CLSigma.sh            # local shell launcher
-README.md             # usage and scope
+internet_field_update.py  # one-way symbolic Internet field-update packet
+iphone_ish_toe.py         # iPhone+iSH formal TOE-language entry
+runtime_ish_safe.py       # ultra-safe integer-only iSH runtime
+runtime.py                # general CLSigma cross-version runtime
+CLSigma.sh                # local shell launcher
+README.md                 # usage and scope
 ```
