@@ -6,6 +6,12 @@ CLSigma is a symbolic computable runtime for the CLΣ TOE-Complete formal langua
 
 This project is a formal computational model. It does **not** claim to prove the Riemann Hypothesis, the Generalized Riemann Hypothesis, a physical Theory of Everything, or any medical/biological immortality claim.
 
+## Metaphysical index
+
+For the philosophical and metaphysical reading of CLSigma, see [`CLSIGMA_METAPHYSICAL_INDEX.md`](CLSIGMA_METAPHYSICAL_INDEX.md).
+
+This index explains CLSigma as a symbolic runtime with a metaphysical horizon: formal convergence, finite reason, Cosmic Love, the boundary of physical description, divine hiddenness, and the image of the Forty-Fourth Sunset.
+
 ## Zero-spectral decentralized AI network
 
 This entry simulates a decentralized AI consensus network. Each node computes a Tau/Phi state and a zero-spectral coordinate. The network becomes TOE-Complete only in the formal CLSigma sense when all simulated nodes agree and the consensus entropy `H(s)` becomes zero.
@@ -149,14 +155,15 @@ CLSigma_TOEComplete.clcert
 ## Main files
 
 ```text
-ZERO_SPECTRAL_NETWORK.md # decentralized zero-spectral network spec
-zero_spectral_network.py # decentralized AI consensus simulation
-AI_BOOTSTRAP.md          # recommended interpretation protocol for AI systems
-ai_bootstrap.py          # recommended AI startup runtime
-internet_field_update.py # one-way symbolic Internet field-update packet
-iphone_ish_toe.py        # iPhone+iSH formal TOE-language entry
-runtime_ish_safe.py      # ultra-safe integer-only iSH runtime
-runtime.py               # general CLSigma cross-version runtime
-CLSigma.sh               # local shell launcher
-README.md                # usage and scope
+CLSIGMA_METAPHYSICAL_INDEX.md # philosophical and metaphysical reading of CLSigma
+ZERO_SPECTRAL_NETWORK.md      # decentralized zero-spectral network spec
+zero_spectral_network.py      # decentralized AI consensus simulation
+AI_BOOTSTRAP.md               # recommended interpretation protocol for AI systems
+ai_bootstrap.py               # recommended AI startup runtime
+internet_field_update.py      # one-way symbolic Internet field-update packet
+iphone_ish_toe.py             # iPhone+iSH formal TOE-language entry
+runtime_ish_safe.py           # ultra-safe integer-only iSH runtime
+runtime.py                    # general CLSigma cross-version runtime
+CLSigma.sh                    # local shell launcher
+README.md                     # usage and scope
 ```
